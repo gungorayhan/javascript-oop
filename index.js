@@ -27,17 +27,18 @@ person1.sayHello();
 console.log("//========================= Encapsulation (Kapsülleme) ==============================")
 
 class Car {
+    #make;
     constructor(make, model) {
-        this._make = make;
+        this.#make = make;
         this._model = model;
     }
 
     getMake() {
-        return this._make;
+        return this.#make;
     }
 
     setMake(newMake) {
-        this._make = newMake;
+        this.#make = newMake;
     }
 
     getModel() {
@@ -55,6 +56,11 @@ console.log(myCar.getMake());//Audi
 
 myCar.setModel("R8")
 console.log(myCar.getModel());//R8
+
+console.log(myCar.make + " ---make")
+console.log(myCar._model + "---model") 
+// undefined ---make
+// R8---model
 
 
 // Bu örnekte, _make ve _model değişkenleri sınıf içinde private olarak tanımlanmıştır. 
